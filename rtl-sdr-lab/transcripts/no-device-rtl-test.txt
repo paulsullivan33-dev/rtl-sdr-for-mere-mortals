@@ -1,0 +1,3 @@
+$ rtl_test
+No supported devices found.
+[exit 1]

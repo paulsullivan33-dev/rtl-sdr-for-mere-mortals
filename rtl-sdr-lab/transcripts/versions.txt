@@ -1,0 +1,6 @@
+$ dpkg-query -W rtl-sdr dump1090-mutability rtl-433 sox librtlsdr2
+dump1090-mutability	1.15~20180310.4a16df3+dfsg-8.1build1
+librtlsdr2:amd64	2.0.1-2build1
+rtl-433	23.11-1build1
+rtl-sdr	2.0.1-2build1
+sox	14.4.2+git20190427-4build4

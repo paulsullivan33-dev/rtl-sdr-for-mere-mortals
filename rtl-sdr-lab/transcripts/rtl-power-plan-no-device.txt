@@ -1,0 +1,12 @@
+$ rtl_power -f 88M:108M:100k -i 1 -1 -
+Number of frequency hops: 8
+Dongle bandwidth: 2500000Hz
+Downsampling by: 1x
+Cropping by: 0.00%
+Total FFT bins: 256
+Logged FFT bins: 256
+FFT bin size: 78125.00Hz
+Buffer size: 16384 bytes (3.28ms)
+Reporting every 1 seconds
+No supported devices found.
+[exit 1]

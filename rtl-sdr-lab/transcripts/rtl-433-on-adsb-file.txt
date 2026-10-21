@@ -1,0 +1,4 @@
+$ rtl_433 -r modes1.bin (a 1090 MHz ADS-B recording fed to a 433 MHz sensor decoder)
+rtl_433 version 23.11 (2023-11-28) inputs file rtl_tcp RTL-SDR SoapySDR
+[102;92m[[30mInput[92m][0m Test mode active. Reading samples from file: samples/modes1.bin
+[done]

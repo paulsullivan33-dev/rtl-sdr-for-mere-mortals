@@ -1,0 +1,5 @@
+$ dump1090-mutability
+Wed Oct 21 22:18:49 2026 UTC  EB_SOURCE EB_VERSION starting up.
+Using sample converter: UC8, integer/table path
+No supported RTLSDR devices found.
+[exit 1]

@@ -1,0 +1,64 @@
+RTL-SDR commands — the everyday set
+from "RTL-SDR for Mere Mortals"
+========================================================================
+
+Every output quoted in the guide was captured on
+a dongle-less Ubuntu 24.04 machine: rtl-sdr
+2.0.1, dump1090-mutability 1.15, rtl-433 23.11,
+sox 14.4.2, and the original dump1090 built from
+project source. Commands that need a receiver
+are shown failing honestly in the transcripts;
+the shapes below are theirs.
+
+
+IS ANYONE THERE
+--------------------
+rtl_test                    the dongle census and self-test
+rtl_test -t                 tuner benchmark (dongle required)
+rtl_test -p                 measure the dongle's ppm error
+                            (dongle and a known signal required)
+
+
+LISTEN
+--------------------
+rtl_fm -f 96.1M -M wbfm -s 170k -r 32k - | aplay -r 32000 -f S16_LE
+                            broadcast FM, the classic first command
+rtl_fm -f 118M:137M:25k -M am -l 60 -
+                            scan the airband, squelch at 60
+
+
+RECORD AND DECODE LATER
+--------------------
+rtl_sdr -f 1090000000 -s 2000000 -g 50 sky.bin
+                            record raw I/Q (Ctrl-C to stop;
+                            ~4 MB/s at 2 Msps — watch the disk)
+dump1090 --ifile modes1.bin decode a recording (antirez build;
+                            the file must be 2 MHz UC8)
+dump1090 --ifile modes1.bin --raw
+                            the same, messages as hex lines
+dump1090 --ifile modes1.bin --stats
+                            decode statistics instead of messages
+
+
+SENSORS
+--------------------
+rtl_433                     decode the 433 MHz sensor band
+rtl_433 -R help             list the protocols this build knows
+                            (244 in 23.11, counted on the build
+                            machine)
+
+
+SURVEY
+--------------------
+rtl_power -f 88M:108M:100k -i 10 survey.csv
+                            log power across the FM band
+                            (dongle required; the plan lines the
+                            tool prints before failing are in the
+                            transcripts)
+
+
+AUDIO PLUMBING (verified without a radio)
+--------------------
+sox -t raw -r 24000 -e signed-integer -b 16 -c 1 in.raw out.wav
+                            label rtl_fm's headerless output
+sox tone.wav -n stats       measure what you captured

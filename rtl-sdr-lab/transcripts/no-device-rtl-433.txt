@@ -1,0 +1,4 @@
+$ rtl_433
+rtl_433 version 23.11 (2023-11-28) inputs file rtl_tcp RTL-SDR SoapySDR
+[102;92m[[30mSDR[92m][0m No supported devices found.
+[exit 2]

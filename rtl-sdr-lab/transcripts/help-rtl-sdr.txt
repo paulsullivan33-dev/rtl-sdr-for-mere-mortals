@@ -1,0 +1,16 @@
+$ rtl_sdr -h
+rtl_sdr: invalid option -- 'h'
+rtl_sdr, an I/Q recorder for RTL2832 based DVB-T receivers
+
+Usage:	 -f frequency_to_tune_to [Hz]
+	[-s samplerate (default: 2048000 Hz)]
+	[-d device_index (default: 0)]
+	[-g gain (default: 0 for auto)]
+	[-p ppm_error (default: 0)]
+	[-b output_block_size (default: 16 * 16384)]
+	[-n number of samples to read (default: 0, infinite)]
+	[-S force sync output (default: async)]
+	[-D enable direct sampling (default: off)]
+	filename (a '-' dumps samples to stdout)
+
+[exit 1]

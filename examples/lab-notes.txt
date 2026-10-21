@@ -1,0 +1,66 @@
+The lab — one recording, no antenna
+========================================================================
+
+This guide's lab is not a tree of files. It is a
+single recording of the radio sky, plus a build
+machine with no receiver plugged into it. Both
+halves are deliberate, and both are stated here
+so nothing in the chapters can pretend otherwise.
+
+THE RECORDING
+--------------------
+modes1.bin — 713,736 bytes of unsigned 8-bit I/Q
+samples at 2,000,000 samples per second, recorded
+from a real antenna pointed at real 1090 MHz
+aircraft traffic. It ships with the dump1090
+project ("testfiles/") so the decoder can be
+tested by people with no receiver at all. Get it
+with fetch-sample.sh, beside this note; the
+script verifies the SHA-256 of what arrives
+(3a33e16025da8669149c780075950b4e908ca036ea21f9
+583c113f60d5fb3094).
+
+713,736 bytes is 356,868 I/Q pairs. At two
+million pairs a second, the whole recording is
+0.178 seconds of sky. Everything this guide
+verifies by decoding comes out of that fifth of
+a second. Chapter 5 counts what is in it: one
+aircraft, ICAO address 4d2023, callsign AMC421,
+217 usable messages.
+
+THE BUILD MACHINE
+--------------------
+Ubuntu 24.04, no RTL-SDR dongle attached, no
+antenna, no RF of any kind. Packages installed
+from the Ubuntu archive purely to be run:
+
+    rtl-sdr               2.0.1-2build1
+    librtlsdr2            2.0.1-2build1
+    dump1090-mutability   1.15~20180310.4a16df3+dfsg-8.1build1
+    rtl-433               23.11-1build1
+    sox                   14.4.2+git20190427-4build4
+
+plus the original dump1090 (antirez) built from
+its project source at build time, because its
+own test file is the lab.
+
+CONSEQUENCES, STATED ONCE
+--------------------
+Every command in this guide that needs a live
+dongle was run anyway, and its real behaviour
+with no dongle present is captured in
+rtl-sdr-lab/transcripts/ ("No supported devices
+found.", exit 1, in tool after tool). The
+chapters teach from those captures what can
+honestly be taught from them — command shapes,
+defaults, planners, failure text — and mark
+the rest as documented-only. Nothing anywhere
+in this guide reports a signal the build
+machine received, because it received none.
+
+The one piece of live signal work is chapter
+3's sox chain: a two-second tone synthesised
+into the exact headerless shape rtl_fm emits,
+then labelled and measured with sox. It proves
+the audio plumbing, not the radio. The chapters
+say so where they use it.

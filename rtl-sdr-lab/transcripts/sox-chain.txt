@@ -1,0 +1,19 @@
+$ ls -l synth-tone.raw (2 seconds of headerless 24 kHz 16-bit mono, the shape of rtl_fm output)
+-rw-rw---- 1 root nogroup 96000 Oct 21 22:20 synth-tone.raw
+$ sox -t raw -r 24000 -e signed-integer -b 16 -c 1 synth-tone.raw tone.wav
+$ soxi tone.wav
+
+Input File     : 'tone.wav'
+Channels       : 1
+Sample Rate    : 24000
+Precision      : 16-bit
+Duration       : 00:00:02.00 = 48000 samples ~ 150 CDDA sectors
+File Size      : 96.0k
+Bit Rate       : 384k
+Sample Encoding: 16-bit Signed Integer PCM
+
+$ sox tone.wav -n stats
+RMS lev dB     -6.05
+RMS Pk dB      -6.04
+RMS Tr dB      -6.08
+Length s       2.000

@@ -1,0 +1,6 @@
+$ dump1090-mutability --ifile modes1.bin
+Wed Oct 21 22:22:06 2026 UTC  EB_SOURCE EB_VERSION starting up.
+Using sample converter: UC8, integer/table path
+Wed Oct 21 22:22:06 2026 UTC  Waiting for receive thread termination
+Wed Oct 21 22:22:06 2026 UTC  Normal exit.
+[exit 0]

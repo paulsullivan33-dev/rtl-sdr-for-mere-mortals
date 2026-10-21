@@ -1,0 +1,22 @@
+site_name: RTL-SDR for Mere Mortals
+site_description: Plain-language software-defined radio with a cheap USB dongle. What the receiver hears, the numbers behind tuning and sample rates, broadcast FM from the command line, aircraft decoded from a recorded slice of sky, and the sensor chatter of the 433 MHz band.
+site_url: https://paulsullivan33-dev.github.io/rtl-sdr-for-mere-mortals/
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What RTL-SDR Is: what-rtl-sdr-is.md
+  - The Dongle and the Antenna: the-dongle-and-the-antenna.md
+  - First Listening: first-listening.md
+  - Frequency and Samples: frequency-and-samples.md
+  - Aircraft on 1090 MHz: aircraft-ads-b.md
+  - Sensors and rtl_433: sensors-and-rtl-433.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

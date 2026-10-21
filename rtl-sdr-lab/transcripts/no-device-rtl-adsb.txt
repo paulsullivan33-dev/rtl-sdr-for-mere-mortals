@@ -1,0 +1,3 @@
+$ rtl_adsb
+No supported devices found.
+[exit 1]

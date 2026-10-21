@@ -1,0 +1,11 @@
+$ ./dump1090 --ifile testfiles/modes1.bin --stats
+415 valid preambles
+216 demodulated again after phase correction
+407 demodulated with zero errors
+211 with good crc
+196 with bad crc
+6 errors corrected
+12 single bit errors
+0 two bits errors
+217 total usable messages
+[exit 0]

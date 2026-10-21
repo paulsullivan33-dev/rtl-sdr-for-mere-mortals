@@ -1,0 +1,11 @@
+$ rtl_test -h
+rtl_test, a benchmark tool for RTL2832 based DVB-T receivers
+
+Usage:
+	[-s samplerate (default: 2048000 Hz)]
+	[-d device_index (default: 0)]
+	[-t enable Elonics E4000 tuner benchmark]
+	[-p[seconds] enable PPM error measurement (default: 10 seconds)]
+	[-b output_block_size (default: 16 * 16384)]
+	[-S force sync output (default: async)]
+[exit 1]

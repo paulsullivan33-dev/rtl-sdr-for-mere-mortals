@@ -145,3 +145,19 @@ take the lab's place. `examples/lab-notes.txt`
 records the recording's size, provenance,
 and the build machine's exact package
 versions.
+
+---
+
+## Part of the series
+
+This guide is one of the [For Mere Mortals](https://paulsullivan33-dev.github.io/mere-mortals/) guides: plain-language guides to the tools programmers and makers use.
+
+Related guides:
+
+- [OpenWebRX for Mere Mortals](https://paulsullivan33-dev.github.io/openwebrx-for-mere-mortals/)
+- [Ham Radio for Mere Mortals](https://paulsullivan33-dev.github.io/ham-radio-for-mere-mortals/)
+- [Meshtastic for Mere Mortals](https://paulsullivan33-dev.github.io/meshtastic-for-mere-mortals/)
+
+## License
+
+The writing in this guide is licensed under [CC BY 4.0](https://github.com/paulsullivan33-dev/rtl-sdr-for-mere-mortals/blob/main/LICENSE). Code examples and lab scripts are licensed under the [MIT License](https://github.com/paulsullivan33-dev/rtl-sdr-for-mere-mortals/blob/main/LICENSE-CODE).
